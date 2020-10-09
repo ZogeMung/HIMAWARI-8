@@ -48,7 +48,7 @@ namespace HIMAWARI_8
             request.ContentType = "text/html;charset=UTF-8";
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             Stream myResponseStream = response.GetResponseStream();
-            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
+            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8);
             string retString = myStreamReader.ReadToEnd();
             return retString;
         }
